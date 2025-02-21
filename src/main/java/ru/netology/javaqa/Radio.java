@@ -54,11 +54,7 @@ public class Radio {
         return volume;
     }
 
-    // Установили максимальную громкость - 100.
 
-    public void setToMaxVolume() {
-        volume = 100;
-    }
 
     // Установили верхнюю и нижнюю границу громкости.
 
@@ -69,6 +65,7 @@ public class Radio {
         if (newVolume > 100) {
             return;
         }
+        volume = newVolume;
     }
 
     // Устанавливаем шаги прибавления и убавления громкости
