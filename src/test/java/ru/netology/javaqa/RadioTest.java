@@ -1,6 +1,6 @@
 package ru.netology.javaqa;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 import org.junit.jupiter.api.Assertions;
 
 public class RadioTest {
@@ -109,7 +109,5 @@ public class RadioTest {
         int actual =rad.getStation();
         Assertions.assertEquals(expected, actual);
     }
-
-    
 
 }
