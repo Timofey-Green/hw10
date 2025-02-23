@@ -2,10 +2,11 @@ package ru.netology.javaqa;
 
 public class Radio {
 
-    public int station;
-    public int volume;
+    private int station;
+    private int volume;
 
     //НАСТРОЙКА РАДИОСТАНЦИИ.
+    //ГЕТТЕР СТАНЦИИ
 
     public int getStation() {
         return station;
@@ -14,6 +15,7 @@ public class Radio {
 
     // Установили максимальные границы ввода.
 
+    //СЕТТЕР СТАНЦИИ
     public void setStation(int newStation) {
         if (newStation < 0) {
             return;
@@ -47,17 +49,15 @@ public class Radio {
     }
 
 
-
     //НАСТРОЙКА ГРОМКОСТИ
-
+    //ГЕТТЕР ГРОМКОСТИ
     public int getVolume() {
         return volume;
     }
 
 
-
     // Установили верхнюю и нижнюю границу громкости.
-
+    //СЕТТЕР ГРОМКОСТИ
     public void setVolume(int newVolume) {
         if (newVolume < 0) {
             return;
