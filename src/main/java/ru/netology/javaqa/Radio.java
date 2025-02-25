@@ -2,8 +2,25 @@ package ru.netology.javaqa;
 
 public class Radio {
 
+
+    private int quantityStation = 10;
+    private int maxStation = 9;
+    private  int minStation = 0;
     private int station;
+    private  int maxVolume = 100;
+    private int minVolume = 0;
     private int volume;
+
+    public  Radio(int quantityStation) {
+        this.quantityStation = quantityStation;
+    }
+
+    public Radio() {
+    }
+
+    public int getQuantityStation() {
+        return  quantityStation;
+    }
 
     //НАСТРОЙКА РАДИОСТАНЦИИ.
     //ГЕТТЕР СТАНЦИИ
@@ -17,10 +34,10 @@ public class Radio {
 
     //СЕТТЕР СТАНЦИИ
     public void setStation(int newStation) {
-        if (newStation < 0) {
+        if (newStation < minStation) {
             return;
         }
-        if (newStation > 9) {
+        if (newStation > maxStation) {
             return;
         }
         station = newStation;
@@ -29,10 +46,10 @@ public class Radio {
     // Установили шаги переключения станций.
 
     public void nextStation() {
-        if (station < 9) {
+        if (station < maxStation) {
             station = station + 1;
         } else {
-            station = 0;
+            station = minStation;
         }
 
 
@@ -40,10 +57,10 @@ public class Radio {
 
 
     public void prevStation() {
-        if (station > 0) {
+        if (station > minStation) {
             station = station - 1;
         } else {
-            station = 9;
+            station = maxStation;
         }
 
     }
@@ -59,10 +76,10 @@ public class Radio {
     // Установили верхнюю и нижнюю границу громкости.
     //СЕТТЕР ГРОМКОСТИ
     public void setVolume(int newVolume) {
-        if (newVolume < 0) {
+        if (newVolume < minVolume) {
             return;
         }
-        if (newVolume > 100) {
+        if (newVolume > maxVolume) {
             return;
         }
         volume = newVolume;
@@ -71,13 +88,13 @@ public class Radio {
     // Устанавливаем шаги прибавления и убавления громкости
 
     public void increaseVolume() {
-        if (volume < 100) {
+        if (volume < maxVolume) {
             volume = volume + 1;
         }
     }
 
     public void decreaseVolume() {
-        if (volume > 0) {
+        if (volume > minVolume) {
             volume = volume - 1;
         }
 

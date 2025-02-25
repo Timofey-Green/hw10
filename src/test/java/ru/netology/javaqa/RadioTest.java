@@ -9,6 +9,25 @@ public class RadioTest {
     // Проверяем ввод валидного значения, нижней границы, верхней границы
     // и неваличных значений по двум границам.
 
+    @Test //Устанавливаем количество станций c помощью конструктора.
+
+    public void settingTheNumberOfStations() {
+        Radio rad = new Radio(15);
+        Assertions.assertEquals(15, rad.getQuantityStation());
+
+
+    }
+
+    @Test //Устанавливаем станций по умолчанию c помощью конструктора.
+
+    public void settingTheBasicNumberOfStations() {
+        Radio rad = new Radio ();
+        Assertions.assertEquals(10, rad.getQuantityStation());
+
+
+    }
+
+
 
     @Test //Устанавливаем валидное значение станции
 
@@ -145,7 +164,7 @@ public class RadioTest {
 
     @Test  //Установили верхнее граничное значение громкости
 
-    public void shoulMaxVolume() {    //Установили валидное значение громкости
+    public void shoulMaxVolume() {
         Radio rad = new Radio();
 
         rad.setVolume(100);
@@ -158,7 +177,7 @@ public class RadioTest {
 
     @Test  //Установили нижнее граничное значение громкости
 
-    public void shoulMinVolume() {    //Установили валидное значение громкости
+    public void shoulMinVolume() {
         Radio rad = new Radio();
 
         rad.setVolume(0);
@@ -171,7 +190,7 @@ public class RadioTest {
 
     @Test  //Устанавливаем верхнее невалидное граничное значение
 
-    public void InvalidMaxVolume() {    //Установили валидное значение громкости
+    public void InvalidMaxVolume() {
         Radio rad = new Radio();
 
         rad.setVolume(101);
@@ -183,7 +202,7 @@ public class RadioTest {
 
     @Test  //Устанавливаем нижнее невалидное граничное значение
 
-    public void InvalidMinVolume() {    //Установили валидное значение громкости
+    public void InvalidMinVolume() {
         Radio rad = new Radio();
 
         rad.setVolume(-1);
