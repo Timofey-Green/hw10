@@ -4,22 +4,25 @@ public class Radio {
 
 
     private int quantityStation = 10;
-    private int maxStation = 9;
-    private  int minStation = 0;
+    private int maxStation;
+    private int minStation = 0;
     private int station;
-    private  int maxVolume = 100;
+    private int maxVolume = 100;
     private int minVolume = 0;
     private int volume;
 
-    public  Radio(int quantityStation) {
-        this.quantityStation = quantityStation;
+
+    public Radio(int quantityStation) {
+        this.maxStation =quantityStation - 1;
     }
 
     public Radio() {
+        this.maxStation = 9;
     }
 
+
     public int getQuantityStation() {
-        return  quantityStation;
+        return quantityStation;
     }
 
     //НАСТРОЙКА РАДИОСТАНЦИИ.

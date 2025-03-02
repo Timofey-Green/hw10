@@ -12,8 +12,11 @@ public class RadioTest {
     @Test //Устанавливаем количество станций c помощью конструктора.
 
     public void settingTheNumberOfStations() {
-        Radio rad = new Radio(15);
-        Assertions.assertEquals(15, rad.getQuantityStation());
+        Radio rad = new Radio(20);
+
+        rad.setStation(15);
+
+        Assertions.assertEquals(15, rad.getStation());
 
 
     }
